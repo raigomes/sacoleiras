@@ -9,6 +9,12 @@ var debug = require('debug')('sacoleiras:server');
 var http = require('http');
 
 /**
+ * Load custom modules
+ */
+
+global.db = require('../db');
+
+/**
  * Get port from environment and store in Express.
  */
 

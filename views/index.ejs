@@ -6,6 +6,24 @@
   </head>
   <body>
     <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <ul>
+      <% docs.forEach(function(customer){ %>
+        <li>
+            Nome: <%= customer.nome %>
+        </li>
+        <li>
+            Data de Nascimento: <%= customer.dataDeNascimento.toString() %>
+        </li>
+        <li>
+            Telefone: <%= customer.telefone %>
+        </li>
+        <li>
+            Sutiã: <%= customer.tamanhoSutia %> / Calcinha: <%= customer.tamanhoCalcinha %>
+        </li>
+        <li>
+            Obs.: <%= customer.observacoes %>
+        </li>
+      <% }) %>
+    </ul>
   </body>
 </html>
