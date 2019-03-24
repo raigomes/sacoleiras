@@ -97,4 +97,14 @@ router.post('/edit/:id', function (req, res) {
   })
 });
 
+router.get('/delete/:id', function (req, res) {
+  var id = req.params.id;
+  global.db.deleteOne(id, "customers", (e, result) => {
+    if (e) {
+      return console.log(e);
+    }
+    res.redirect('/');
+  });
+});
+
 module.exports = router;

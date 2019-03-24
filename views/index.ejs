@@ -40,6 +40,11 @@
         Atualizar dados
       </a>
     </li>
+    <li>
+      <a href="/delete/<%= customer._id %>" onclick="confirm('Você deseja excluir <%= customer.nome %>?')">
+        Deletar cliente
+      </a>
+    </li>
   </ul>
   <% }) %>
   <a href="/new">Cadastrar novo cliente</a>

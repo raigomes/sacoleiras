@@ -27,9 +27,16 @@ function update(id, customer, collection, callback) {
     }, callback)
 }
 
+function deleteOne(id, collection, callback) {
+    global.conn.collection(collection).deleteOne({
+        _id: new ObjectId(id)
+    }, callback)
+}
+
 module.exports = {
     findAll,
     findOne,
     insert,
-    update
+    update,
+    deleteOne
 }
