@@ -12,18 +12,18 @@
   <h1>
     <%= title %>
   </h1>
-  <form action="/new" method="POST">
+  <form action="<%= action %>" method="POST">
     <div>
       <label for="nome">Nome:</label>
-      <input type="text" name="nome" />
+      <input type="text" name="nome" value="<%= doc.nome %>" />
       <label for="dataDeNascimento">Data de Nascimento:</label>
-      <input type="date" name="dataDeNascimento" />
+      <input type="date" name="dataDeNascimento" value="<%= doc.dataDeNascimento %>" />
       <label for="telefone">Telefone/Whatsapp:</label>
-      <input type="tel" name="telefone" />
+      <input type="tel" name="telefone" value="<%= doc.telefone %>" />
     </div>
     <div>
       <label for="tamanhoSutia">Sutiã:</label>
-      <select name="tamanhoSutia">
+      <select name="tamanhoSutia" value="<%= doc.tamanhoSutia %>">
         <option value="PP">PP (36/38)</option>
         <option value="P">P (38/40)</option>
         <option value="M">M (40/42)</option>
@@ -39,7 +39,7 @@
         <option value="60">Plus 60+</option>
       </select>
       <label for="tamanhoCalcinha">Calcinha:</label>
-      <select name="tamanhoCalcinha">
+      <select name="tamanhoCalcinha" value="<%= doc.tamanhoCalcinha %>">
         <option value="PP">PP (36/38)</option>
         <option value="P">P (38/40)</option>
         <option value="M">M (40/42)</option>
@@ -55,7 +55,7 @@
         <option value="60">Plus 60+</option>
       </select>
       <label for="coresPreferidas">Cores Preferidas:</label>
-      <input type="text" name="coresPreferidas" list="cores" />
+      <input type="text" name="coresPreferidas" list="cores" value="<%= doc.coresPreferidas %>" />
       <datalist id="cores">
         <option value="azul">
         <option value="amarelo">
@@ -83,7 +83,7 @@
     </div>
     <div>
       <label for="observacoes">Observações:</label>
-      <textarea name="observacoes" cols="30" rows="10"></textarea>
+      <textarea name="observacoes" cols="30" rows="10" value="<%= doc.observacoes %>"></textarea>
     </div>
     <input type="submit" value="Salvar" />
   </form>
