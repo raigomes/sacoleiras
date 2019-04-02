@@ -1,0 +1,22 @@
+.main-container {
+    display: grid;
+    grid-template-areas: "header header""menu content""footer footer";
+    grid-template-rows: auto;
+    grid-template-columns: 30% 70%;
+}
+
+.cabecalho {
+    grid-area: header;
+}
+
+.menu-nav {
+    grid-area: menu;
+}
+
+.conteudo-principal {
+    grid-area: content;
+}
+
+.rodape {
+    grid-area: footer;
+}

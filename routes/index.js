@@ -3,11 +3,18 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function (req, res) {
+  res.render('index', {
+    title: 'Sacoleiras.com'
+  });
+})
+
+/* GET lista page. */
+router.get('/list', function (req, res) {
   global.db.findAll("customers", (e, docs) => {
     if (e) {
       return console.log(e);
     }
-    res.render('index', {
+    res.render('list', {
       title: 'Lista de Clientes',
       docs: docs
     });
