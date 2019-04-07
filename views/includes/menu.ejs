@@ -1,48 +1,60 @@
 <ul class="nav menu flex-column">
     <li class="nav-item">
-        <a href="/" class="nav-link">Início</a>
-    </li>
-    <li class="nav-item dropdown">
-        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-            aria-expanded="false">Clientes</a>
-        <div class="dropdown-menu">
-            <a href="/new" class="dropdown-item">Cadastrar</a>
-            <a href="/edit" class="dropdown-item">Atualizar</a>
-            <a href="/list" class="dropdown-item">Listar</a>
-            <a href="/delete" class="dropdown-item">Remover</a>
+        <div class="card">
+            <a href="/" class="btn btn-secondary">Início</a>
         </div>
     </li>
-    <li class="nav-item dropdown">
-        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-            aria-expanded="false">Vendas</a>
-        <div class="dropdown-menu">
-            <a href="/new" class="dropdown-item">Cadastrar</a>
-            <a href="/edit" class="dropdown-item">Atualizar</a>
-            <a href="/list" class="dropdown-item">Listar</a>
-            <a href="/delete" class="dropdown-item">Remover</a>
+    <li class="nav-item accordion">
+        <div class="card">
+            <a href="#" class="btn btn-secondary dropdown-toggle" data-toggle="collapse" type="button"
+                data-target="#clientCollapse" aria-controls="clientCollapse" aria-expanded="true">Clientes</a>
+            <div id="clientCollapse" class="collapse list-group-flush">
+                <a href="/new" class="list-group-item">Cadastrar</a>
+                <a href="/edit" class="list-group-item">Atualizar</a>
+                <a href="/list" class="list-group-item">Listar</a>
+                <a href="/delete" class="list-group-item">Remover</a>
+            </div>
         </div>
     </li>
-    <li class="nav-item dropdown">
-        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-            aria-expanded="false">Lojas</a>
-        <div class="dropdown-menu">
-            <a href="/new" class="dropdown-item">Cadastrar</a>
-            <a href="/edit" class="dropdown-item">Atualizar</a>
-            <a href="/list" class="dropdown-item">Listar</a>
-            <a href="/delete" class="dropdown-item">Remover</a>
+    <li class="nav-item accordion">
+        <div class="card">
+            <a href="#" class="btn btn-secondary dropdown-toggle" data-toggle="collapse" type="button"
+                data-target="#salesCollapse" aria-controls="salesCollapse" aria-expanded="true">Vendas</a>
+            <div id="salesCollapse" class="collapse list-group-flush">
+                <a href="/new" class="list-group-item">Cadastrar</a>
+                <a href="/edit" class="list-group-item">Atualizar</a>
+                <a href="/list" class="list-group-item">Listar</a>
+                <a href="/delete" class="list-group-item">Remover</a>
+            </div>
         </div>
     </li>
-    <li class="nav-item dropdown">
-        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-            aria-expanded="false">Produtos</a>
-        <div class="dropdown-menu">
-            <a href="/new" class="dropdown-item">Cadastrar</a>
-            <a href="/edit" class="dropdown-item">Atualizar</a>
-            <a href="/list" class="dropdown-item">Listar</a>
-            <a href="/delete" class="dropdown-item">Remover</a>
+    <li class="nav-item accordion">
+        <div class="card">
+            <a href="#" class="btn btn-secondary dropdown-toggle" data-toggle="collapse" type="button"
+                data-target="#storeCollapse" aria-controls="storeCollapse" aria-expanded="true">Lojas</a>
+            <div id="storeCollapse" class="collapse list-group-flush">
+                <a href="/new" class="list-group-item">Cadastrar</a>
+                <a href="/edit" class="list-group-item">Atualizar</a>
+                <a href="/list" class="list-group-item">Listar</a>
+                <a href="/delete" class="list-group-item">Remover</a>
+            </div>
+        </div>
+    </li>
+    <li class="nav-item accordion">
+        <div class="card">
+            <a href="#" class="btn btn-secondary dropdown-toggle" data-toggle="collapse" type="button"
+                data-target="#productCollapse" aria-controls="productCollapse" aria-expanded="true">Produtos</a>
+            <div id="productCollapse" class="collapse list-group-flush">
+                <a href="/new" class="list-group-item">Cadastrar</a>
+                <a href="/edit" class="list-group-item">Atualizar</a>
+                <a href="/list" class="list-group-item">Listar</a>
+                <a href="/delete" class="list-group-item">Remover</a>
+            </div>
         </div>
     </li>
     <li class="nav-item">
-        <a href="/creditos" class="nav-link">Sobre o app</a>
+        <div class="card">
+            <a href="/creditos" class="btn btn-secondary">Sobre o app</a>
+        </div>
     </li>
 </ul>
