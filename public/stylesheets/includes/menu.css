@@ -1,3 +1,5 @@
 .menu-nav {
     grid-area: menu;
+    background-color: #336666;
+    color: #fff;
 }

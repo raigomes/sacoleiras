@@ -1,6 +1,6 @@
 body {
-    padding: 50px;
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-color: #f1f1f2;
 }
 
 a {
@@ -9,12 +9,15 @@ a {
 
 .main-container {
     display: grid;
-    grid-template-areas: "header header""menu content""footer footer";
-    grid-template-rows: auto;
-    grid-template-columns: 20% 1fr;
-    grid-gap: 20px;
+    grid-template-areas: "header header""menu content""menu footer";
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 15% 1fr;
 }
 
 .conteudo-principal {
     grid-area: content;
+    border: 1px solid #414142;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0 10px 20px;
 }

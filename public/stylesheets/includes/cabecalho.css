@@ -1,3 +1,14 @@
 .cabecalho {
     grid-area: header;
+    display: flex;
+}
+
+.cabecalho-logo {
+    width: 15%;
+    background-color: #002B5C;
+    text-align: center;
+}
+
+.cabecalho-logo img {
+    width: 25%;
 }
