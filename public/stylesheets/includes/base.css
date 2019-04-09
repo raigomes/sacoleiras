@@ -9,8 +9,8 @@ a {
 
 .main-container {
     display: grid;
-    grid-template-areas: "header header""menu content""footer footer";
-    grid-template-rows: auto 1fr auto;
+    grid-template-areas: "header header""menu content";
+    grid-template-rows: auto 1fr;
     grid-template-columns: auto 1fr;
 }
 
