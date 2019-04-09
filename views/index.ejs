@@ -7,12 +7,9 @@
 
 <body>
   <main class="main-container">
-    <header class="cabecalho">
-      <% include includes/header.ejs %>
-    </header>
-    <nav class="menu-nav">
-      <% include includes/menu.ejs %>
-    </nav>
+    <% include includes/header.ejs %>
+    <% include includes/menu.ejs %>
+
     <section class="conteudo-principal">
       <div class="logo">
         <figure class="figure">
@@ -21,9 +18,8 @@
         </figure>
       </div>
     </section>
-    <footer class="rodape">
-      <% include includes/footer.ejs %>
-    </footer>
+
+    <% include includes/footer.ejs %>
   </main>
   <% include includes/js_footer.ejs %>
 </body>
