@@ -1,73 +1,87 @@
-    <nav id="nav" class="menu-nav navbar-dark navbar-collapse collapse">
-        <ul class="nav navbar-nav menu-list">
-            <li class="nav-item">
-                <div class="card">
-                    <a href="/" class="btn btn-outline-info">Início</a>
+<% let classActive = 'active'  %>
+<% let classForm = 'text-dark'  %>
+
+<nav id="nav" class="menu-nav navbar-dark navbar-collapse collapse">
+    <ul class="nav navbar-nav menu-list">
+        <li class="nav-item">
+            <div class="card">
+                <a href="/" class="btn btn-outline-info <%= (page === 'inicio' ? classActive : '') %>">Início</a>
+            </div>
+        </li>
+        <li class="nav-item accordion">
+            <div class="card">
+                <a href="#" class="btn btn-outline-info dropdown-toggle <%= (page === 'clientes' ? classActive : '') %>"
+                    data-toggle="collapse" type="button" data-target="#clientCollapse" aria-controls="clientCollapse"
+                    aria-expanded="true">Clientes</a>
+                <div id="clientCollapse" class="collapse list-group-flush <%= (page === 'clientes' ? 'show' : '') %>">
+                    <a href="/new"
+                        class="list-group-item <%= (page === 'clientes' && form === 'new' ? classForm : '') %>">Cadastrar</a>
+                    <a href="/edit"
+                        class="list-group-item <%= (page === 'clientes' && form === 'edit' ? classForm : '') %>">Atualizar</a>
+                    <a href="/list"
+                        class="list-group-item <%= (page === 'clientes' && form === 'list' ? classForm : '') %>">Listar</a>
+                    <a href="/delete"
+                        class="list-group-item <%= (page === 'clientes' && form === 'delete' ? classForm : '') %>">Remover</a>
                 </div>
-            </li>
-            <li class="nav-item accordion">
-                <div class="card">
-
-                    <a href="#" class="btn btn-outline-info dropdown-toggle" data-toggle="collapse" type="button"
-                        data-target="#clientCollapse" aria-controls="clientCollapse" aria-expanded="true">Clientes</a>
-                    <div id="clientCollapse" class="collapse list-group-flush">
-                        <a href="/new" class="list-group-item">Cadastrar</a>
-                        <a href="/edit" class="list-group-item">Atualizar</a>
-                        <a href="/list" class="list-group-item">Listar</a>
-                        <a href="/delete" class="list-group-item">Remover</a>
-                    </div>
-
+            </div>
+        </li>
+        <li class="nav-item accordion">
+            <div class="card">
+                <a href="#" class="btn btn-outline-info dropdown-toggle <%= (page === 'vendas' ? classActive : '') %>"
+                    data-toggle="collapse" type="button" data-target="#salesCollapse" aria-controls="salesCollapse"
+                    aria-expanded="true">Vendas</a>
+                <div id="salesCollapse" class="collapse list-group-flush <%= (page === 'vendas' ? 'show' : '') %>">
+                    <a href="/new"
+                        class="list-group-item <%= (page === 'vendas' && form === 'new' ? classForm : '') %>">Cadastrar</a>
+                    <a href="/edit"
+                        class="list-group-item <%= (page === 'vendas' && form === 'edit' ? classForm : '') %>">Atualizar</a>
+                    <a href="/list"
+                        class="list-group-item <%= (page === 'vendas' && form === 'list' ? classForm : '') %>">Listar</a>
+                    <a href="/delete"
+                        class="list-group-item <%= (page === 'vendas' && form === 'delete' ? classForm : '') %>">Remover</a>
                 </div>
-            </li>
-            <li class="nav-item accordion">
-                <div class="card">
-
-                    <a href="#" class="btn btn-outline-info dropdown-toggle" data-toggle="collapse" type="button"
-                        data-target="#salesCollapse" aria-controls="salesCollapse" aria-expanded="true">Vendas</a>
-                    <div id="salesCollapse" class="collapse list-group-flush">
-                        <a href="/new" class="list-group-item">Cadastrar</a>
-                        <a href="/edit" class="list-group-item">Atualizar</a>
-                        <a href="/list" class="list-group-item">Listar</a>
-                        <a href="/delete" class="list-group-item">Remover</a>
-                    </div>
-
+            </div>
+        </li>
+        <li class="nav-item accordion">
+            <div class="card">
+                <a href="#" class="btn btn-outline-info dropdown-toggle <%= (page === 'lojas' ? classActive : '') %>"
+                    data-toggle="collapse" type="button" data-target="#storeCollapse" aria-controls="storeCollapse"
+                    aria-expanded="true">Lojas</a>
+                <div id="storeCollapse" class="collapse list-group-flush <%= (page === 'lojas' ? 'show' : '') %>">
+                    <a href="/new"
+                        class="list-group-item <%= (page === 'lojas' && form === 'new' ? classForm : '') %>">Cadastrar</a>
+                    <a href="/edit"
+                        class="list-group-item <%= (page === 'lojas' && form === 'edit' ? classForm : '') %>">Atualizar</a>
+                    <a href="/list"
+                        class="list-group-item <%= (page === 'lojas' && form === 'list' ? classForm : '') %>">Listar</a>
+                    <a href="/delete"
+                        class="list-group-item <%= (page === 'lojas' && form === 'delete' ? classForm : '') %>">Remover</a>
                 </div>
-            </li>
-            <li class="nav-item accordion">
-                <div class="card">
-
-                    <a href="#" class="btn btn-outline-info dropdown-toggle" data-toggle="collapse" type="button"
-                        data-target="#storeCollapse" aria-controls="storeCollapse" aria-expanded="true">Lojas</a>
-                    <div id="storeCollapse" class="collapse list-group-flush">
-                        <a href="/new" class="list-group-item">Cadastrar</a>
-                        <a href="/edit" class="list-group-item">Atualizar</a>
-                        <a href="/list" class="list-group-item">Listar</a>
-                        <a href="/delete" class="list-group-item">Remover</a>
-                    </div>
-
+            </div>
+        </li>
+        <li class="nav-item accordion">
+            <div class="card">
+                <a href="#" class="btn btn-outline-info dropdown-toggle <%= (page === 'produtos' ? classActive : '') %>"
+                    data-toggle="collapse" type="button" data-target="#productCollapse" aria-controls="productCollapse"
+                    aria-expanded="true">Produtos</a>
+                <div id="productCollapse" class="collapse list-group-flush <%= (page === 'produtos' ? 'show' : '') %>">
+                    <a href="/new"
+                        class="list-group-item <%= (page === 'produtos' && form === 'new' ? classForm : '') %>">Cadastrar</a>
+                    <a href="/edit"
+                        class="list-group-item <%= (page === 'produtos' && form === 'edit' ? classForm : '') %>">Atualizar</a>
+                    <a href="/list"
+                        class="list-group-item <%= (page === 'produtos' && form === 'list' ? classForm : '') %>">Listar</a>
+                    <a href="/delete"
+                        class="list-group-item <%= (page === 'produtos' && form === 'delete' ? classForm : '') %>">Remover</a>
                 </div>
-            </li>
-            <li class="nav-item accordion">
-                <div class="card">
-
-                    <a href="#" class="btn btn-outline-info dropdown-toggle" data-toggle="collapse" type="button"
-                        data-target="#productCollapse" aria-controls="productCollapse" aria-expanded="true">Produtos</a>
-                    <div id="productCollapse" class="collapse list-group-flush">
-                        <a href="/new" class="list-group-item">Cadastrar</a>
-                        <a href="/edit" class="list-group-item">Atualizar</a>
-                        <a href="/list" class="list-group-item">Listar</a>
-                        <a href="/delete" class="list-group-item">Remover</a>
-                    </div>
-
-                </div>
-            </li>
-            <li class="nav-item">
-                <div class="card">
-
-                    <a href="/creditos" class="btn btn-outline-info">Sobre o app</a>
-
-                </div>
-            </li>
-        </ul>
-        <div class="creditos">&copy; 2019 Rai Gomes</div>
-    </nav>
+            </div>
+        </li>
+        <li class="nav-item">
+            <div class="card">
+                <a href="/creditos" class="btn btn-outline-info <%= (page === 'sobre' ? classActive : '') %>">Sobre o
+                    app</a>
+            </div>
+        </li>
+    </ul>
+    <div class="creditos">&copy; 2019 Rai Gomes</div>
+</nav>

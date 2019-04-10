@@ -6,96 +6,90 @@
 </head>
 
 <body>
-  <header>
+  <main class="main-container">
     <% include includes/header.ejs %>
-  </header>
-  <nav>
-    <% include includes/menu.ejs %>
-  </nav>
-  <main>
-    <h1>
-      <%= title %>
-    </h1>
-    <form action="<%= action %>" method="POST">
-      <div>
-        <label for="nome">Nome:</label>
-        <input type="text" name="nome" value="<%= doc.nome %>" />
-        <label for="dataDeNascimento">Data de Nascimento:</label>
-        <input type="date" name="dataDeNascimento" value="<%= doc.dataDeNascimento %>" />
-        <label for="telefone">Telefone/Whatsapp:</label>
-        <input type="tel" name="telefone" value="<%= doc.telefone %>" />
-      </div>
-      <div>
-        <label for="tamanhoSutia">Sutiã:</label>
-        <select name="tamanhoSutia" value="<%= doc.tamanhoSutia %>">
-          <option value="PP">PP (36/38)</option>
-          <option value="P">P (38/40)</option>
-          <option value="M">M (40/42)</option>
-          <option value="G">G (42/44)</option>
-          <option value="GG">GG (44/46)</option>
-          <option value="EG">EG (46/48)</option>
-          <option value="XG">XG (48/50)</option>
-          <option value="50">Plus 50</option>
-          <option value="52">Plus 52</option>
-          <option value="54">Plus 54</option>
-          <option value="56">Plus 56</option>
-          <option value="58">Plus 58</option>
-          <option value="60">Plus 60+</option>
-        </select>
-        <label for="tamanhoCalcinha">Calcinha:</label>
-        <select name="tamanhoCalcinha" value="<%= doc.tamanhoCalcinha %>">
-          <option value="PP">PP (36/38)</option>
-          <option value="P">P (38/40)</option>
-          <option value="M">M (40/42)</option>
-          <option value="G">G (42/44)</option>
-          <option value="GG">GG (44/46)</option>
-          <option value="EG">EG (46/48)</option>
-          <option value="XG">XG (48/50)</option>
-          <option value="50">Plus 50</option>
-          <option value="52">Plus 52</option>
-          <option value="54">Plus 54</option>
-          <option value="56">Plus 56</option>
-          <option value="58">Plus 58</option>
-          <option value="60">Plus 60+</option>
-        </select>
-        <label for="coresPreferidas">Cores Preferidas:</label>
-        <input type="text" name="coresPreferidas" list="cores" value="<%= doc.coresPreferidas %>" />
-        <datalist id="cores">
-          <option value="azul">
-          <option value="amarelo">
-          <option value="vermelho">
-          <option value="preto">
-          <option value="bege">
-          <option value="branco">
-          <option value="cinza">
-          <option value="verde">
-          <option value="marrom">
-          <option value="roxo">
-          <option value="lilas">
-          <option value="rosa">
-          <option value="bordo">
-          <option value="vinho">
-          <option value="laranja">
-          <option value="bronze">
-          <option value="prateado">
-          <option value="dourado">
-        </datalist>
-        <input type="checkbox" name="plusSize" />
-        <label for="plusSize">Plus Size?</label>
-        <input type="checkbox" name="conjunto" />
-        <label for="conjunto">Aceita conjunto?</label>
-      </div>
-      <div>
-        <label for="observacoes">Observações:</label>
-        <textarea name="observacoes" cols="30" rows="10" value="<%= doc.observacoes %>"></textarea>
-      </div>
-      <input type="submit" value="Salvar" />
-    </form>
+    <%- include('includes/menu', { page: 'clientes', form: 'new' }) %>
+
+    <section class="conteudo-principal">
+      <h2><%= title %></h2>
+      <form action="<%= action %>" method="POST">
+        <div>
+          <label for="nome">Nome:</label>
+          <input type="text" name="nome" value="<%= doc.nome %>" />
+          <label for="dataDeNascimento">Data de Nascimento:</label>
+          <input type="date" name="dataDeNascimento" value="<%= doc.dataDeNascimento %>" />
+          <label for="telefone">Telefone/Whatsapp:</label>
+          <input type="tel" name="telefone" value="<%= doc.telefone %>" />
+        </div>
+        <div>
+          <label for="tamanhoSutia">Sutiã:</label>
+          <select name="tamanhoSutia" value="<%= doc.tamanhoSutia %>">
+            <option value="PP">PP (36/38)</option>
+            <option value="P">P (38/40)</option>
+            <option value="M">M (40/42)</option>
+            <option value="G">G (42/44)</option>
+            <option value="GG">GG (44/46)</option>
+            <option value="EG">EG (46/48)</option>
+            <option value="XG">XG (48/50)</option>
+            <option value="50">Plus 50</option>
+            <option value="52">Plus 52</option>
+            <option value="54">Plus 54</option>
+            <option value="56">Plus 56</option>
+            <option value="58">Plus 58</option>
+            <option value="60">Plus 60+</option>
+          </select>
+          <label for="tamanhoCalcinha">Calcinha:</label>
+          <select name="tamanhoCalcinha" value="<%= doc.tamanhoCalcinha %>">
+            <option value="PP">PP (36/38)</option>
+            <option value="P">P (38/40)</option>
+            <option value="M">M (40/42)</option>
+            <option value="G">G (42/44)</option>
+            <option value="GG">GG (44/46)</option>
+            <option value="EG">EG (46/48)</option>
+            <option value="XG">XG (48/50)</option>
+            <option value="50">Plus 50</option>
+            <option value="52">Plus 52</option>
+            <option value="54">Plus 54</option>
+            <option value="56">Plus 56</option>
+            <option value="58">Plus 58</option>
+            <option value="60">Plus 60+</option>
+          </select>
+          <label for="coresPreferidas">Cores Preferidas:</label>
+          <input type="text" name="coresPreferidas" list="cores" value="<%= doc.coresPreferidas %>" />
+          <datalist id="cores">
+            <option value="azul">
+            <option value="amarelo">
+            <option value="vermelho">
+            <option value="preto">
+            <option value="bege">
+            <option value="branco">
+            <option value="cinza">
+            <option value="verde">
+            <option value="marrom">
+            <option value="roxo">
+            <option value="lilas">
+            <option value="rosa">
+            <option value="bordo">
+            <option value="vinho">
+            <option value="laranja">
+            <option value="bronze">
+            <option value="prateado">
+            <option value="dourado">
+          </datalist>
+          <input type="checkbox" name="plusSize" />
+          <label for="plusSize">Plus Size?</label>
+          <input type="checkbox" name="conjunto" />
+          <label for="conjunto">Aceita conjunto?</label>
+        </div>
+        <div>
+          <label for="observacoes">Observações:</label>
+          <textarea name="observacoes" cols="30" rows="10" value="<%= doc.observacoes %>"></textarea>
+        </div>
+        <input type="submit" value="Salvar" />
+      </form>
+    </section>
+    <% include includes/js_footer.ejs %>
   </main>
-  <footer>
-    <% include includes/footer.ejs %>
-  </footer>
-  <% include includes/js_footer.ejs %>
 </body>
 
 </html>

@@ -6,53 +6,49 @@
 </head>
 
 <body>
-  <header>
+  <main class="main-container">
     <% include includes/header.ejs %>
-  </header>
-  <nav>
-    <% include includes/menu.ejs %>
-  </nav>
-  <main>
-    <% docs.forEach(function(customer){ %>
-    <ul>
-      <li>
-        Nome:
-        <%= customer.nome %>
-      </li>
-      <li>
-        Data de Nascimento:
-        <%= customer.dataDeNascimento.toString() %>
-      </li>
-      <li>
-        Telefone:
-        <%= customer.telefone %>
-      </li>
-      <li>
-        Sutiã:
-        <%= customer.tamanhoSutia %> / Calcinha:
-        <%= customer.tamanhoCalcinha %>
-      </li>
-      <li>
-        Obs.:
-        <%= customer.observacoes %>
-      </li>
-      <li>
-        <a href="/edit/<%= customer._id %>">
-          Atualizar dados
-        </a>
-      </li>
-      <li>
-        <a href="/delete/<%= customer._id %>" onclick="confirm('Você deseja excluir <%= customer.nome %>?')">
-          Deletar cliente
-        </a>
-      </li>
-    </ul>
-    <% }) %>
-    <a href="/new">Cadastrar novo cliente</a>
+    <%- include('includes/menu', { page: 'clientes', form: 'list' }) %>
+
+    <section class="conteudo-principal">
+      <% docs.forEach(function(customer){ %>
+      <ul>
+        <li>
+          Nome:
+          <%= customer.nome %>
+        </li>
+        <li>
+          Data de Nascimento:
+          <%= customer.dataDeNascimento.toString() %>
+        </li>
+        <li>
+          Telefone:
+          <%= customer.telefone %>
+        </li>
+        <li>
+          Sutiã:
+          <%= customer.tamanhoSutia %> / Calcinha:
+          <%= customer.tamanhoCalcinha %>
+        </li>
+        <li>
+          Obs.:
+          <%= customer.observacoes %>
+        </li>
+        <li>
+          <a href="/edit/<%= customer._id %>">
+            Atualizar dados
+          </a>
+        </li>
+        <li>
+          <a href="/delete/<%= customer._id %>" onclick="confirm('Você deseja excluir <%= customer.nome %>?')">
+            Deletar cliente
+          </a>
+        </li>
+      </ul>
+      <% }) %>
+      <a href="/new">Cadastrar novo cliente</a>
+    </section>
   </main>
-  <footer>
-    <% include includes/footer.ejs %>
-  </footer>
   <% include includes/js_footer.ejs %>
 </body>
 

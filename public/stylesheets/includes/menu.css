@@ -1,14 +1,22 @@
 .menu-nav {
-    grid-area: menu;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     background-color: #336666;
     color: #fff;
-    width: 200px;
     min-height: calc(100vh - 60px);
 }
 
 .menu-list {
     width: 100%;
+}
+
+@media(min-width: 661px) {
+    .main-container .menu-nav {
+        grid-area: menu;
+        display: flex;
+        justify-content: space-between;
+        width: 200px;
+    }
+
 }
