@@ -15,31 +15,56 @@
           <h3>Dados Pessoais</h3>
           <div class="form-group">
               <label for="nome">Nome:</label>
-              <input
-                type="text"
-                name="nome"
-                class="form-control form-name"
-                value="<%= doc.nome %>"
-              />
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroupPrepend1">
+                      <i class="fas fa-user"></i>
+                  </span>
+                </div>
+                <input
+                  type="text"
+                  name="nome"
+                  class="form-control form-name"
+                  value="<%= doc.nome %>"
+                  aria-describedby="inputGroupPrepend1"
+                  required
+                />
+              </div>
           </div>
           <div class="form-group">
               <label for="dataDeNascimento">Data de Nascimento:</label>
-              <input
-                type="text"
-                name="dataDeNascimento"
-                class="form-control form-date"
-                value="<%= doc.dataDeNascimento %>"
-              />
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroupPrepend2">
+                      <i class="far fa-calendar-alt"></i>
+                  </span>
+                </div>
+                <input
+                  type="text"
+                  name="dataDeNascimento"
+                  class="form-control form-date"
+                  value="<%= doc.dataDeNascimento %>"
+                  aria-describedby="inputGroupPrepend2"
+                />
+              </div>
             </div>
           </div>
           <div class="form-group">
             <label for="telefone">Telefone/Whatsapp:</label>
-            <input
-              type="tel"
-              name="telefone"
-              class="form-control form-phone"
-              value="<%= doc.telefone %>"
-            />
+            <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroupPrepend3">
+                      <i class="fab fa-whatsapp"></i>
+                  </span>
+                </div>
+                <input
+                  type="tel"
+                  name="telefone"
+                  class="form-control form-phone"
+                  value="<%= doc.telefone %>"
+                  aria-describedby="inputGroupPrepend3"
+                />
+            </div>
           </div>
           <h3>Tamanhos</h3>
           <div class="form-group">
@@ -80,33 +105,41 @@
           </div>
           <div class="form-group">
             <label for="coresPreferidas">Cores Preferidas:</label>
-            <input
-              type="text"
-              name="coresPreferidas"
-              class="form-control"
-              list="cores"
-              value="<%= doc.coresPreferidas %>"
-            />
-            <datalist id="cores">
-              <option value="azul"> </option>
-              <option value="amarelo"> </option>
-              <option value="vermelho"> </option>
-              <option value="preto"> </option>
-              <option value="bege"> </option>
-              <option value="branco"> </option>
-              <option value="cinza"> </option>
-              <option value="verde"> </option>
-              <option value="marrom"> </option>
-              <option value="roxo"> </option>
-              <option value="lilas"> </option>
-              <option value="rosa"> </option>
-              <option value="bordo"> </option>
-              <option value="vinho"> </option>
-              <option value="laranja"> </option>
-              <option value="bronze"> </option>
-              <option value="prateado"> </option>
-              <option value="dourado"> </option>
-            </datalist>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupPrepend3">
+                    <i class="fas fa-palette"></i>
+                </span>
+              </div>
+              <input
+                type="text"
+                name="coresPreferidas"
+                class="form-control"
+                list="cores"
+                value="<%= doc.coresPreferidas %>"
+                placeholder="Digite a cor aqui..."
+              />
+              <datalist id="cores">
+                <option value="azul"> </option>
+                <option value="amarelo"> </option>
+                <option value="vermelho"> </option>
+                <option value="preto"> </option>
+                <option value="bege"> </option>
+                <option value="branco"> </option>
+                <option value="cinza"> </option>
+                <option value="verde"> </option>
+                <option value="marrom"> </option>
+                <option value="roxo"> </option>
+                <option value="lilas"> </option>
+                <option value="rosa"> </option>
+                <option value="bordo"> </option>
+                <option value="vinho"> </option>
+                <option value="laranja"> </option>
+                <option value="bronze"> </option>
+                <option value="prateado"> </option>
+                <option value="dourado"> </option>
+              </datalist>
+            </div>
           </div>
           <h3>Informações Extras</h3>
           <div class="form-check form-check-inline">

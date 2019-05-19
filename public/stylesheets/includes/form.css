@@ -1,0 +1,11 @@
+.shadow-success {
+  -webkit-box-shadow: inset 0px 0px 5px 1px #28a745;
+  -moz-box-shadow: inset 0px 0px 5px 1px #28a745;
+  box-shadow: inset 0px 0px 5px 1px #28a745;
+}
+
+.shadow-error {
+  -webkit-box-shadow: inset 0px 0px 5px 1px #dc3545;
+  -moz-box-shadow: inset 0px 0px 5px 1px #dc3545;
+  box-shadow: inset 0px 0px 5px 1px #dc3545;
+}
